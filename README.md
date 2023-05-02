@@ -12,3 +12,7 @@
 - Autorización -> Gestión de permisos
 
 Para este curso usaremos [Json Web Token (JWT)](https://jwt.io/)
+
+## Protección de contraseñas
+
+### Middleware de verificación
