@@ -38,3 +38,10 @@ Intercambio de información: los JWT son una buena forma de transmitir informaci
 ### Firmar y verificar tokens
 
 Para recordar: __NO__ guardes información sensible en el payload del JWT. Esta información la podemos ver en el [debugger](https://jwt.io/#debugger-io) de JWT.
+
+- [What Are Refresh Tokens and How to Use Them Securely](https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/)
+- [Configure Silent Authentication](https://auth0.com/docs/authenticate/login/configure-silent-authentication)
+
+### Generar JWT en el servicio
+
+Tenemos que guardar el JWT secret token en el archivo .env y podemos obtener un tokek desde [Keygen.io](https://keygen.io/)
