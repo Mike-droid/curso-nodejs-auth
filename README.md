@@ -18,3 +18,5 @@ Para este curso usaremos [Json Web Token (JWT)](https://jwt.io/)
 ### Middleware de verificación
 
 ### Hashing de contraseñas con bcryptjs
+
+### Implementando hashing para usuarios
