@@ -20,3 +20,7 @@ Para este curso usaremos [Json Web Token (JWT)](https://jwt.io/)
 ### Hashing de contraseñas con bcryptjs
 
 ### Implementando hashing para usuarios
+
+## Passport y JSON Web Tokens
+
+### Implementando login con Passport.js
