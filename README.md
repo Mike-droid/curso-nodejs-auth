@@ -47,3 +47,5 @@ Para recordar: __NO__ guardes información sensible en el payload del JWT. Esta 
 Tenemos que guardar el JWT secret token en el archivo .env y podemos obtener un tokek desde [Keygen.io](https://keygen.io/)
 
 ### Protección de rutas
+
+### Control de roles
