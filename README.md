@@ -49,3 +49,5 @@ Tenemos que guardar el JWT secret token en el archivo .env y podemos obtener un 
 ### Protección de rutas
 
 ### Control de roles
+
+### Obteniendo órdenes del perfil
