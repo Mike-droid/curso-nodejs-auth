@@ -51,3 +51,11 @@ Tenemos que guardar el JWT secret token en el archivo .env y podemos obtener un 
 ### Control de roles
 
 ### Obteniendo órdenes del perfil
+
+### Manejo de la autenticación desde el cliente
+
+En el login nos mandan el token, este debemos guardarlo porque lo enviaremos en todas las peticiones.
+
+Podemos guardar el token en Cookies (lo más recomendado) o en LocalStorage (no es la mejor práctica).
+
+Es muy usado en bancos el 'refresh token' por medidas de seguridad, por ejemplo, cada 15 minutos expira el token y sacamos al usuario de la sesión y debe de vovler a hacer login.
