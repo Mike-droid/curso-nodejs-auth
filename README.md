@@ -71,3 +71,5 @@ Usamos [Ethereal](https://ethereal.email/) email para enviar emails con un fake 
 ## Recuperación de contraseñas
 
 ### Generando links de recuperación
+
+### Validando tokens para cambio de contraseña
