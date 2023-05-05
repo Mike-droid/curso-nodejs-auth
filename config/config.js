@@ -6,7 +6,9 @@ const config = {
   port: process.env.PORT || 3000,
   dbUrl: process.env.DATABASE_URL,
   apiKey: process.env.API_KEY,
-  jwtSecret: process.env.JWT_SECRET
+  jwtSecret: process.env.JWT_SECRET,
+  emailSender: process.env.FAKE_EMAIL,
+  emailPassword: process.env.FAKE_PASSWORD
 }
 
 module.exports = { config };
