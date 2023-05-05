@@ -62,6 +62,12 @@ Es muy usado en bancos el 'refresh token' por medidas de seguridad, por ejemplo,
 
 ## Envío de emails con Node.js
 
+Usamos [Ethereal](https://ethereal.email/) email para enviar emails con un fake email y fake password.
+
 ### Cómo enviar emails con Node.js
 
 ### Implementando el envío de emails
+
+## Recuperación de contraseñas
+
+### Generando links de recuperación

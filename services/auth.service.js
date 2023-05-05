@@ -33,12 +33,30 @@ class AuthService {
     };
   }
 
-  async sendMail(email) {
+  async sentRecovery(email) {
     const user = await service.findByEmail(email);
     if (!user) {
       throw(boom.unauthorized());
     }
 
+    const payload = { sub: user.id };
+    const token = jwt.sign(payload, config.jwtSecret, { expiresIn: '15min' });
+    const link = `http://myfrontend.com/recovery?token=${token}`;
+    await service.update(user.id, { recoveryToken: token });
+
+    const mail = {
+      from: process.env.FAKE_EMAIL,
+      to: `${user.email}`,
+      subject: 'Email para recuperar contraseña',
+      text: 'Recover password',
+      html: `<b>Ingresa a este link => ${link}</b>`,
+    }
+
+    const rta = await this.sendMail(mail);
+    return rta;
+  }
+
+  async sendMail(infoMail) {
     const transporter = nodemailer.createTransport({
       host: 'smtp.ethereal.email',
       port: 587,
@@ -49,14 +67,7 @@ class AuthService {
       }
     });
 
-    await transporter.sendMail({
-      from: process.env.FAKE_EMAIL, // sender address
-      to: `${user.email}`,
-      subject: 'Hello ✔', // Subject line
-      text: 'Hello world?', // plain text body
-      html: '<b>Hello world?</b>', // html body
-    });
-
+    await transporter.sendMail(infoMail);
     return { message: 'Mail sent' }
   }
 }
