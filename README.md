@@ -59,3 +59,7 @@ En el login nos mandan el token, este debemos guardarlo porque lo enviaremos en 
 Podemos guardar el token en Cookies (lo más recomendado) o en LocalStorage (no es la mejor práctica).
 
 Es muy usado en bancos el 'refresh token' por medidas de seguridad, por ejemplo, cada 15 minutos expira el token y sacamos al usuario de la sesión y debe de vovler a hacer login.
+
+## Envío de emails con Node.js
+
+### Cómo enviar emails con Node.js
